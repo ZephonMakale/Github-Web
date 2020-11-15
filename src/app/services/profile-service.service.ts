@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Users } from '../users';
-import { Repos } from '../repos';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 
@@ -17,7 +15,7 @@ export class ProfileServiceService {
 
    }
 // tslint:disable-next-line:typedef
-getuserNme(username: string) {
+getuserName(username: string) {
   return this.http.get('https://api.github.com/users/' + username + '?access_token=' + environment.apiKey);
 }
 // tslint:disable-next-line:typedef

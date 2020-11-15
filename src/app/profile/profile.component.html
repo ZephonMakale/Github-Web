@@ -1,1 +1,8 @@
+<p>{{profile.name}}</p>
+<p>{{profile.login}}</p>
+<img src="{{profile.avatar_url}}" alt="">
+<div *ngFor='let repo of repos'>
+<p>{{repo.name}}</p>
+<p>{{repo.language}}</p>
+</div>
 
