@@ -1,15 +1,16 @@
 <div class="content-box">
     <form>
       <div>
-        <label for="username">Username:</label>
+        <label for="username"></label>
         <input
           id="username"
           name="username"
           type="text"
           [(ngModel)]="username"
         />
+        <button (click)=search()>Search</button>
       </div>
-      <button (click)=search()>Search</button>
+
     </form>
   </div>
 
