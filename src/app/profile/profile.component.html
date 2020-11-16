@@ -1,5 +1,5 @@
-<!-- <app-search (mySearch) = 'getuserName($event)'></app-search>
-<p>{{profile.name}}</p>
+<app-search (mySearch) = 'getuserName($event)'></app-search>
+<!-- <p>{{profile.name}}</p>
 <p>{{profile.login}}</p>
 <img src="{{profile.avatar_url}}" alt="">
 <div *ngFor='let repo of repos'>
@@ -31,7 +31,7 @@
               {{ profile.bio }}
             </li>
             <li class="list-group-item" *ngIf="profile.hireable">
-              {{ profile.hireable }}
+              Available for hire
             </li>
             <li class="list-group-item" *ngIf="profile.blog">
               <a href="{{ profile.blog }}" target="_blank">{{
