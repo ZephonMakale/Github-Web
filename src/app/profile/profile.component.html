@@ -75,14 +75,16 @@
               <div class="div panel-heading items">
                 <h3 class="panel-title">Repositories</h3>
               </div>
-              <div class="">
+              <div class="clearfix">
                 <ul class="list-group">
-                  <li *ngFor="let repo of repos" class="list-group-item ">
+                  <li *ngFor="let repo of repos" class="list-group-item clearfix">
                     {{ repo.name
                     }}<a href="{{ repo.html_url }}" target="_blank"
                       class="btn btn-sm btn-success pull-right items">View on github</a><i class="fas fa-circle"></i><i class="fas fa-circle items"><p>{{repo.language}}</p></i>
-                      <p class="items">{{repo.created_at | date}}</p>
-                  </li>
+                      <p class="items">{{repo.description}}</p>
+                      <p class="items">-{{repo.created_at | date}}</p>
+                    </li>
+
                 </ul>
               </div>
             </div>
