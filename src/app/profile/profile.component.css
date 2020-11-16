@@ -5,6 +5,9 @@
 .location {
   width: 20%;
 }
-h5 {
+h5{
+  font-style: italic;
+}
+.dated{
   font-style: italic;
 }
