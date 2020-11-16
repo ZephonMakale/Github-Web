@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 .items {
   font-family: "Montserrat", sans-serif;
 }
@@ -9,5 +10,7 @@ h5{
   font-style: italic;
 }
 .dated{
-  font-style: italic;
+
+  font-family: 'Italianno', cursive;
+  font-size: 25px;
 }
