@@ -7,21 +7,83 @@
 <p>{{repo.language}}</p>
 </div> -->
 
-<div *ngIf = "profile" >
-  <div class="container-fluid">
-    <div class="navbar navbar-expand-lg navbar-dark bg-blue fixed-top container-fluid">
-      {{profile.name}}<small>({{profile.login}})</small>
-      <span *ngIf="profile.company">
-        ,Works at {{profile.company}}
-      </span>
-      {{profile.location}}
+<div *ngIf="profile">
+  <div class="container-fluid panel panel-default">
+    <div class="panel-heading">
+      {{ profile.name }}<small>({{ profile.login }})</small>
+      <span *ngIf="profile.company"> ,Works at {{ profile.company }} </span>
+      {{ profile.location }}
     </div>
-    <br/>
-    <br/>
+    <br />
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3">
-          <img src="{{profile.avatar_url}}" class="img-fluid rounded-circle shadow-2-strong hover-shadow" alt="100x100" data-holder-rendered="true"/>
+          <img
+            src="{{ profile.avatar_url }}"
+            class="img-fluid img-circle img-responsive"
+            alt="100x100"
+            data-holder-rendered="true"
+          />
+        </div>
+        <div class="col-sm-5">
+          <ul class="list-group">
+            <li class="list-group-item" *ngIf="profile.bio">
+              {{ profile.bio }}
+            </li>
+            <li class="list-group-item" *ngIf="profile.hireable">
+              {{ profile.hireable }}
+            </li>
+            <li class="list-group-item" *ngIf="profile.blog">
+              <a href="{{ profile.blog }}" target="_blank">{{
+                profile.blog
+              }}</a>
+            </li>
+            <li class="list-group-item" *ngIf="profile.email">
+              <a href="Emailto:{{ profile.email }}" target="_blank">{{
+                profile.email
+              }}</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-4">
+          <div>
+            <p>
+              <span class="label label-default">
+                Followers: {{ profile.followers }}
+              </span>
+              <span class="label label-default">
+                Following {{ profile.followings }}
+              </span>
+              <span class="label label-default">
+                Public gists: {{ profile.public_gists }}
+              </span>
+              <span class="label label-default">
+                Public Repositories: {{ profile.public_repos }}
+              </span>
+            </p>
+            <p>
+              <a href="{{ profile.html_url }}" class="btn btn-success btn-sm"
+                >View Profile on Github</a
+              >
+            </p>
+            <div class="div panel panel-default">
+              <div class="div panel-heading">
+                <h3 class="panel-title">Repositories</h3>
+              </div>
+              <div class="">
+                <ul class="list-group">
+                  <li *ngFor="let repo of repos" class="list-group-item">
+                    {{ repo.name
+                    }}<a
+                      href="{{ repo.html_url }}" target="_blank"
+                      class="btn btn-sm btn-success pull-right"
+                      >View project on github</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
