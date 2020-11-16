@@ -23,12 +23,23 @@
           <div class="items" >
             <h3><strong>{{ profile.name }}</strong></h3>
           </div>
-          <div class="items">
-            <b>({{ profile.login }})</b>
+          <div class="items" style="color: grey;">
+            <h4>({{ profile.login }})</h4>
             <span *ngIf="profile.company"> ,Works at {{ profile.company }} </span>
           </div>
-          <div>
-            {{ profile.location }}
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="location">
+                  <a class="loc">
+                    <img src="../../../assets/loc.png" alt="" width="5%"/>
+                  </a>
+                  <div class="items">
+                    {{ profile.location }}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-sm-5">
