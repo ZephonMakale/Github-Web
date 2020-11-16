@@ -15,7 +15,7 @@
       {{ profile.location }}
     </div>
     <br />
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
         <div class="col-sm-3">
           <img
@@ -48,21 +48,21 @@
         <div class="col-sm-4">
           <div>
             <p>
-              <span class="label label-default">
+              <span class="badge">
                 Followers: {{ profile.followers }}
               </span>
-              <span class="label label-default">
+              <span class="badge">
                 Following {{ profile.followings }}
               </span>
-              <span class="label label-default">
+              <span class="badge">
                 Public gists: {{ profile.public_gists }}
               </span>
-              <span class="label label-default">
+              <span class="badge">
                 Public Repositories: {{ profile.public_repos }}
               </span>
-            </p>
+
             <p>
-              <a href="{{ profile.html_url }}" class="btn btn-success btn-sm"
+              <a href="{{ profile.html_url }}" class="btn btn-success btn-sm badge"
                 >View Profile on Github</a
               >
             </p>
