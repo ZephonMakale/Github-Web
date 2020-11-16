@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-body {
+* {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #333;
@@ -251,22 +251,25 @@ textarea.input {
 .input-checkbox input[type="checkbox"]:checked ~ .caption {
   max-height: 800px;
 }
+
 /*=========================================================
 	02 -> HEADER
 ===========================================================*/
 #header {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 1px;
+  padding-bottom: 1px;
   background-color: #15161d;
 }
 
-.header-logo {
+/* .header-logo {
   float: left;
-}
+} */
 
 .header-logo .logo img {
-  display: block;
-  width: 20%;
+  justify-content: center;
+  text-align: center;
+  width: 15%;
+  padding-top: 5.5%;
 }
 
 /*----------------------------*\

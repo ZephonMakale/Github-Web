@@ -9,11 +9,6 @@
 
 <div *ngIf="profile">
   <div class="container-fluid panel panel-default">
-    <div class="panel-heading">
-      {{ profile.name }}<small>({{ profile.login }})</small>
-      <span *ngIf="profile.company"> ,Works at {{ profile.company }} </span>
-      {{ profile.location }}
-    </div>
     <br />
     <div class="container">
       <div class="row">
@@ -24,9 +19,20 @@
             alt="100x100"
             data-holder-rendered="true"
           />
+          <hr/>
+          <div class="items" >
+            <h3><strong>{{ profile.name }}</strong></h3>
+          </div>
+          <div class="items">
+            <b>({{ profile.login }})</b>
+            <span *ngIf="profile.company"> ,Works at {{ profile.company }} </span>
+          </div>
+          <div>
+            {{ profile.location }}
+          </div>
         </div>
         <div class="col-sm-5">
-          <ul class="list-group">
+          <ul class="list-group items">
             <li class="list-group-item" *ngIf="profile.bio">
               {{ profile.bio }}
             </li>
@@ -47,7 +53,7 @@
         </div>
         <div class="col-sm-4">
           <div>
-            <p>
+            <p class="items">
               <span class="badge">
                 Followers: {{ profile.followers }}
               </span>
@@ -60,24 +66,26 @@
               <span class="badge">
                 Public Repositories: {{ profile.public_repos }}
               </span>
+              <hr/>
 
-            <p>
+            <p class="items">
               <a href="{{ profile.html_url }}" class="btn btn-success btn-sm badge"
                 >View Profile on Github</a
               >
             </p>
+            <hr/>
             <div class="div panel panel-default">
-              <div class="div panel-heading">
+              <div class="div panel-heading items">
                 <h3 class="panel-title">Repositories</h3>
               </div>
               <div class="">
                 <ul class="list-group">
-                  <li *ngFor="let repo of repos" class="list-group-item">
+                  <li *ngFor="let repo of repos" class="list-group-item ">
                     {{ repo.name
                     }}<a
                       href="{{ repo.html_url }}" target="_blank"
-                      class="btn btn-sm btn-success pull-right"
-                      >View project on github</a
+                      class="btn btn-sm btn-success pull-right item"
+                      >View on github</a
                     >
                   </li>
                 </ul>
