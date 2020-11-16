@@ -27,19 +27,11 @@
             <h4>({{ profile.login }})</h4>
             <span *ngIf="profile.company"> ,Works at {{ profile.company }} </span>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-md-3">
-                <div class="location">
-                  <a class="loc">
-                    <img src="../../../assets/loc.png" alt="" width="5%"/>
-                  </a>
-                  <div class="items">
-                    {{ profile.location }}
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="items">
+            <h5>{{ profile.location }}</h5>
+          </div>
+          <div class="items">
+            @<a href="{{profile.twitter_username}}" *ngIf="profile.twitter_username">{{profile.twitter_username}}</a>
           </div>
         </div>
         <div class="col-sm-5">
@@ -95,7 +87,7 @@
                     {{ repo.name
                     }}<a
                       href="{{ repo.html_url }}" target="_blank"
-                      class="btn btn-sm btn-success pull-right item"
+                      class="btn btn-sm btn-success pull-right items"
                       >View on github</a
                     >
                   </li>
