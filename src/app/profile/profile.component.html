@@ -1,4 +1,4 @@
-<app-search (mySearch) = 'getuserName($event)'></app-search>
+<app-search (mySearch)='getuserName($event)'></app-search>
 <!-- <p>{{profile.name}}</p>
 <p>{{profile.login}}</p>
 <img src="{{profile.avatar_url}}" alt="">
@@ -13,14 +13,10 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-3">
-          <img
-            src="{{ profile.avatar_url }}"
-            class="img-fluid img-circle img-responsive"
-            alt="100x100"
-            data-holder-rendered="true"
-          />
-          <hr/>
-          <div class="items" >
+          <img src="{{ profile.avatar_url }}" class="img-fluid img-circle img-responsive" alt="100x100"
+            data-holder-rendered="true" />
+          <hr />
+          <div class="items">
             <h3><strong>{{ profile.name }}</strong></h3>
           </div>
           <div class="items" style="color: grey;">
@@ -69,14 +65,12 @@
               <span class="badge">
                 Public Repositories: {{ profile.public_repos }}
               </span>
-              <hr/>
+              <hr />
 
             <p class="items">
-              <a href="{{ profile.html_url }}" class="btn btn-success btn-sm badge"
-                >View Profile on Github</a
-              >
+              <a href="{{ profile.html_url }}" class="btn btn-success btn-sm badge">View Profile on Github</a>
             </p>
-            <hr/>
+            <hr />
             <div class="div panel panel-default">
               <div class="div panel-heading items">
                 <h3 class="panel-title">Repositories</h3>
@@ -85,11 +79,8 @@
                 <ul class="list-group">
                   <li *ngFor="let repo of repos" class="list-group-item ">
                     {{ repo.name
-                    }}<a
-                      href="{{ repo.html_url }}" target="_blank"
-                      class="btn btn-sm btn-success pull-right items"
-                      >View on github</a
-                    >
+                    }}<a href="{{ repo.html_url }}" target="_blank"
+                      class="btn btn-sm btn-success pull-right items">View on github</a>
                   </li>
                 </ul>
               </div>
