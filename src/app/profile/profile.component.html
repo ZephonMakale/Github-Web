@@ -31,7 +31,7 @@
             <h5>{{ profile.location }}</h5>
           </div>
           <div class="items">
-            @<a href="{{profile.twitter_username}}" *ngIf="profile.twitter_username">{{profile.twitter_username}}</a>
+            <a href="{{profile.twitter_username}}" *ngIf="profile.twitter_username">@{{profile.twitter_username}}</a>
           </div>
         </div>
         <div class="col-sm-5">

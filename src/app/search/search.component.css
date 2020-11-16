@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+  font-family: "Montserrat", sans-serif;
+}
+.content-box{
+  background-color: #15161d;
+}
+.stl{
+  padding: 15px 50px 10px 70px;
+}
+@media only screen and (max-width: 991px) {
+.stl{
+  padding: 0px 3px 3px 5px;
+}
+}
