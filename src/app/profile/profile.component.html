@@ -79,7 +79,7 @@
                 <ul class="list-group">
                   <li *ngFor="let repo of repos" class="list-group-item ">
                     {{ repo.name
-                    }}<a href="{{ repo.html_url }}" target="_blank"
+                    }}{{repo.language}}<a href="{{ repo.html_url }}" target="_blank"
                       class="btn btn-sm btn-success pull-right items">View on github</a>
                   </li>
                 </ul>
